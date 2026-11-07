@@ -18,7 +18,7 @@ export type DatosProducto = Omit<Producto, '_id'>;
 })
 export class ProductosService {
   private readonly http = inject(HttpClient);
-  private readonly url = 'http://127.0.0.1:3000/api/productos';
+  private readonly url = 'https://smart-buy-api-nine.vercel.app/api/productos';
 
   listar(): Observable<Producto[]> {
     return this.http.get<Producto[]>(this.url);
